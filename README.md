@@ -38,6 +38,7 @@ yarn start
 
 ## Project Structure
 
+```
 app/
 ├── components/
 │ └── Camera/
@@ -45,7 +46,7 @@ app/
 │ └── styles.ts # Component styles
 ├── hooks/
 │ └── useQRScanner.ts # QR scanner logic
-
+```
 
 ## Usage
 
