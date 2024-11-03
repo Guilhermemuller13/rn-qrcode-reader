@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# QR Code Scanner Component
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native component for scanning QR codes using the device camera. Built with Expo Camera for seamless QR code reading functionality.
 
-## Get started
+## Overview
 
-1. Install dependencies
+This component provides a simple interface for QR code scanning with the following features:
 
-   ```bash
-   npm install
-   ```
+- Modal-based camera view
+- Permission handling
+- QR code detection
+- Easy to use button interface
 
-2. Start the app
+## Getting Started
 
-   ```bash
-    npx expo start
-   ```
+### Prerequisites
 
-In the output, you'll find options to open the app in a
+- Node.js installed
+- React Native development environment set up
+- Expo CLI installed
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone this repository
 ```bash
-npm run reset-project
+git clone ...
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+yarn install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+yarn start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+app/
+├── components/
+│ └── Camera/
+│ ├── index.tsx # Camera component
+│ └── styles.ts # Component styles
+├── hooks/
+│ └── useQRScanner.ts # QR scanner logic
 
-## Join the community
 
-Join our community of developers creating universal apps.
+## Usage
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The Camera component provides a button to open the QR scanner modal. When opened, it will:
+1. Check for camera permissions
+2. Request permissions if not granted
+3. Open a full-screen camera view
+4. Automatically detect and process QR codes
+5. Allow closing the scanner via a button
